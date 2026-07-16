@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MMMC Central Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Administrator Home Dashboard
+                <span class="fig-no">Fig 7.3 Admin Home Page</span>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box" style="border-top-color: #FF9933;">
+                    <div class="stat-num" id="admin-stat-total-books">0</div>
+                    <div class="stat-label">Catalogued Books</div>
+                </div>
+                <div class="stat-box" style="border-top-color: #0088CC;">
+                    <div class="stat-num" id="admin-stat-total-students">0</div>
+                    <div class="stat-label">Registered Students</div>
+                </div>
+                <div class="stat-box" style="border-top-color: #E25822;">
+                    <div class="stat-num" id="admin-stat-active-issues">0</div>
+                    <div class="stat-label">Active Loans</div>
+                </div>
+                <div class="stat-box" style="border-top-color: #128807;">
+                    <div class="stat-num" id="admin-stat-total-fines">₹0</div>
+                    <div class="stat-label">Fines Collected</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h3 style="color: var(--gov-blue-dark); border-bottom: 2px solid var(--gov-blue-medium); padding-bottom: 5px;">Active Issued Books List</h3>
+                
+                <div class="table-container">
+                    <table class="gov-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Student ID</th>
+                                <th>Book Title</th>
+                                <th>Issue Date</th>
+                                <th>Due Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-active-issues-tbody">
+                            <!-- Populated dynamically by app.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="location.href='admin_add_book.html'">Add New Book</button>
+                <button class="btn btn-primary" onclick="location.href='admin_issue_book.html'">Issue New Book</button>
+                <button class="btn btn-primary" onclick="location.href='admin_return_book.html'">Return a Book</button>
+                <button class="btn btn-success" onclick="location.href='admin_requisitions.html'">View Book Requisitions</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
