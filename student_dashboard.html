@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - MMMC Central Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Student Account Dashboard
+                <span class="fig-no">Fig 7.12 Student dashboard</span>
+            </div>
+
+            <!-- Student Info Card -->
+            <div style="border:1px solid #DDD; padding:15px; background:var(--gov-blue-light); margin-bottom: 20px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+                <div>
+                    <h3 style="color:var(--gov-blue-dark); margin:0;" id="student-dash-name">Rahul Sharma</h3>
+                    <p style="font-size:13px; font-family:Arial, sans-serif; color:#444; margin-top:3px;">
+                        ID: <strong id="student-dash-id">STU101</strong> | Department: <span id="student-dash-dept">Computer Science</span>
+                    </p>
+                </div>
+                <div style="font-size:13px; font-family:Arial, sans-serif; text-align:right;">
+                    Email: <strong id="student-dash-email">rahul@college.edu</strong><br>
+                    Status: <span class="table-badge badge-approved" style="font-size:10px;">ACTIVE PROFILE</span>
+                </div>
+            </div>
+
+            <!-- Section: Borrowed Books -->
+            <div class="mt-20">
+                <h3 style="color: var(--gov-blue-dark); border-bottom: 2px solid var(--gov-blue-medium); padding-bottom: 3px;">Currently Borrowed Books</h3>
+                <div class="table-container">
+                    <table class="gov-table">
+                        <thead>
+                            <tr>
+                                <th>Issue ID</th>
+                                <th>Book Title</th>
+                                <th>Issue Date</th>
+                                <th>Due Date (Fine of ₹2/day applies after)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-active-issues-tbody">
+                            <!-- Populated dynamically by app.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section: Requisition Requests -->
+            <div class="mt-20">
+                <h3 style="color: var(--gov-blue-dark); border-bottom: 2px solid var(--gov-blue-medium); padding-bottom: 3px;">Online Book Requisitions</h3>
+                <div class="table-container">
+                    <table class="gov-table">
+                        <thead>
+                            <tr>
+                                <th>Request ID</th>
+                                <th>Book Title</th>
+                                <th>Request Date</th>
+                                <th>Status / Admin Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-reqs-tbody">
+                            <!-- Populated dynamically by app.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section: Returned / Historical borrows -->
+            <div class="mt-20">
+                <h3 style="color: var(--gov-blue-dark); border-bottom: 2px solid var(--gov-blue-medium); padding-bottom: 3px;">Borrowing History & Settled Fines</h3>
+                <div class="table-container">
+                    <table class="gov-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Book Title</th>
+                                <th>Issue Date</th>
+                                <th>Return Date</th>
+                                <th>Fine Paid</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-history-tbody">
+                            <!-- Populated dynamically by app.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Action Button Redirection -->
+            <div style="margin-top: 20px; display:flex; gap:10px;">
+                <button class="btn btn-primary" onclick="location.href='student_list_books.html'">Browse & Request Books</button>
+                <button class="btn btn-secondary" onclick="location.href='student_request_book.html'">New Book Requisition</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
