@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog View - MMMC Central Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Library Catalog: Admin Database View
+                <span class="fig-no">Fig 7.6 List of books for admin end</span>
+            </div>
+
+            <p style="font-size: 13px; color:#555; margin-bottom: 15px;">
+                Lists all books currently catalogued in the database. Use the navigation links to add or edit book counts.
+            </p>
+
+            <div class="table-container">
+                <table class="gov-table">
+                    <thead>
+                        <tr>
+                            <th>ISBN / Accession No.</th>
+                            <th>Book Title</th>
+                            <th>Author(s)</th>
+                            <th>Department</th>
+                            <th>Publisher</th>
+                            <th style="text-align: center;">Copies Available</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-books-table-body">
+                        <!-- Populated dynamically by app.js -->
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="btn btn-secondary" onclick="location.href='admin_home.html'">Back to Dashboard</button>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
