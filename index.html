@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Michael Madhusudan Memorial College Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Header Placeholder (Injected by layout.js) -->
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <!-- Sidebar Placeholder (Injected by layout.js) -->
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <!-- Main Display Pane -->
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Welcome to the College Library Portal
+                <span class="fig-no">Fig 7.1 Home Page</span>
+            </div>
+
+            <!-- Welcome Text & Enlarged Cover Library Photo -->
+            <div class="home-hero-card">
+                <div class="hero-copy">
+                    <p>
+                        Welcome to the official Central Library Portal of Michael Madhusudan Memorial College (MMMC), Durgapur. This system is designed under state library guidelines to automate cataloging, book issues, and returns. Students can register online, browse our updated catalog, and place book requisition slips directly to the administration.
+                    </p>
+                </div>
+                <div class="hero-media">
+                    <div class="hero-image">
+                        <div class="hero-banner">WELCOME TO LIBRARY MANAGEMENT SYSTEM</div>
+                        <img src="istockphoto-505551939-612x612.jpg" alt="MMMC Library Hall">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Blocks -->
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-num" id="home-stat-total-books">0</div>
+                    <div class="stat-label">Total Books Catalogued</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num" id="home-stat-total-students">0</div>
+                    <div class="stat-label">Registered Students</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num" id="home-stat-active-issues">0</div>
+                    <div class="stat-label">Active Book Loans</div>
+                </div>
+            </div>
+
+            <div class="login-cards-container">
+                <div class="login-card">
+                    <span class="portal-badge" style="background:#FF9933;">STUDENT AREA</span>
+                    <h3 style="margin-top:10px;">Student Access</h3>
+                    <p>Search books, check issued due dates, and request new books.</p>
+                    <div style="display:flex; justify-content:center; gap:10px;">
+                        <button class="btn btn-primary" onclick="location.href='student_login.html'">Login</button>
+                        <button class="btn btn-secondary" onclick="location.href='student_register.html'">Register Now</button>
+                    </div>
+                </div>
+                <div class="login-card">
+                    <span class="portal-badge" style="background:#002244;">ADMIN DESK</span>
+                    <h3 style="margin-top:10px;">Administrator Access</h3>
+                    <p>Access the administrative controls to issue books, collect returns, and manage catalogs.</p>
+                    <button class="btn btn-primary" onclick="location.href='admin_login.html'">Admin Desk Login</button>
+                </div>
+            </div>
+
+            <div class="mt-20" style="border: 1px solid #CCC; padding: 15px; background: #FAFBFD;">
+                <h3 style="color: var(--gov-blue-dark); border-bottom: 1px solid #EEE; padding-bottom: 5px;">General Notice & Guidelines</h3>
+                <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.6; font-size: 13.5px;">
+                    <li>Students must present their institutional identity card during book collection at the library counter.</li>
+                    <li>A student is permitted to borrow a maximum of <strong>2 books</strong> simultaneously.</li>
+                    <li>Maximum borrow period is <strong>14 days</strong>, after which late fee fines of ₹2.00/day will apply automatically.</li>
+                    <li>All members must abide by the library's rules and agreements.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder (Injected by layout.js) -->
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
