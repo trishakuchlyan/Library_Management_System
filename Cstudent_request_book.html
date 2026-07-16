@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Book - MMMC Central Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Circulation: Student Book Requisition Slip
+                <span class="fig-no">Fig 7.14 Student book request towards admin</span>
+            </div>
+
+            <p style="font-size:13.5px; color:#444; margin-bottom:15px;">
+                Use this form to submit a book reservation request. Once the administrator approves your request, the copies will be reserved for you to collect from the library counter.
+            </p>
+
+            <div class="gov-form">
+                <h3 style="margin-bottom: 15px; color: var(--gov-blue-dark); border-bottom: 1px solid #EEE; padding-bottom: 5px;">Book Requisition Form</h3>
+                
+                <div id="request-error" class="hidden text-danger" style="margin-bottom:10px; font-weight:bold; font-size:13px;"></div>
+
+                <form onsubmit="handleStudentBookRequest(event)">
+                    <div class="form-group">
+                        <label for="request-book-isbn">Select Book <span class="required-star">*</span></label>
+                        <select id="request-book-isbn" required>
+                            <!-- Populated dynamically by app.js -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="request-notes">Special Remarks / Note</label>
+                        <textarea id="request-notes" placeholder="Enter any specific notes for the library admin..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Submit Book Request</button>
+                        <button type="button" class="btn btn-secondary" onclick="location.href='student_dashboard.html'">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
