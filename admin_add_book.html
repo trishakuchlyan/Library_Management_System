@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book - MMMC Central Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Catalog Management: Add New Book Entry
+                <span class="fig-no">Fig 7.4 Admin new book entry</span>
+            </div>
+
+            <div class="gov-form">
+                <h3 style="margin-bottom: 15px; color: var(--gov-blue-dark); border-bottom: 1px solid #EEE; padding-bottom: 5px;">Book Catalogue Form</h3>
+                
+                <div id="addbook-error" class="hidden text-danger" style="margin-bottom: 10px; font-weight: bold; font-size:13px;"></div>
+                <div id="addbook-success" class="hidden text-success" style="margin-bottom: 10px; font-weight: bold; font-size:13px;"></div>
+
+                <form onsubmit="handleAddBook(event)">
+                    <div class="form-group">
+                        <label for="book-title">Book Title <span class="required-star">*</span></label>
+                        <input type="text" id="book-title" placeholder="Enter book title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-author">Author Name <span class="required-star">*</span></label>
+                        <input type="text" id="book-author" placeholder="Enter primary author name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-isbn">ISBN / Accession No. <span class="required-star">*</span></label>
+                        <input type="text" id="book-isbn" placeholder="e.g. 978-XXXXXXXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-dept">Subject Department <span class="required-star">*</span></label>
+                        <select id="book-dept" required>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Electrical Engineering">Electrical Engineering</option>
+                            <option value="Other">Other Literature</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-publisher">Publisher Details <span class="required-star">*</span></label>
+                        <input type="text" id="book-publisher" placeholder="Enter publisher name & year" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-copies">Number of Copies <span class="required-star">*</span></label>
+                        <input type="number" id="book-copies" min="1" max="100" value="1" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Add Book to Catalog</button>
+                        <button type="button" class="btn btn-secondary" onclick="location.href='admin_home.html'">Back to Dashboard</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
