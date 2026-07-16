@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book Counter - MMMC Central Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Circulation: Return / Collection Counter (Admin Only)
+                <span class="fig-no">Fig 7.8 Return any book from student</span>
+            </div>
+
+            <div class="gov-form">
+                <h3 style="margin-bottom: 15px; color: var(--gov-blue-dark); border-bottom: 1px solid #EEE; padding-bottom: 5px;">Book Collection Slip</h3>
+                
+                <div id="return-error" class="hidden text-danger" style="margin-bottom: 10px; font-weight: bold; font-size:13px;"></div>
+                <div id="return-success" class="hidden text-success" style="margin-bottom: 10px; font-weight: bold; font-size:13px;"></div>
+
+                <form onsubmit="handleReturnBookSubmit(event)">
+                    <div class="form-group">
+                        <label for="return-transaction-id">Active Issue ID <span class="required-star">*</span></label>
+                        <select id="return-transaction-id" onchange="handleReturnTransactionChange()" required>
+                            <!-- Populated dynamically by app.js -->
+                        </select>
+                    </div>
+
+                    <!-- Fine dynamic indicator -->
+                    <div id="return-fine-display"></div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Process Return Transaction</button>
+                        <button type="button" class="btn btn-secondary" onclick="location.href='admin_home.html'">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
