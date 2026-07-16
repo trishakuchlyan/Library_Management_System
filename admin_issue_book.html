@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Book - MMMC Central Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Circulation: Book Issue Desk (Admin Only)
+                <span class="fig-no">Fig 7.5 Book Issue Page only for admin</span>
+            </div>
+
+            <div class="gov-form">
+                <h3 style="margin-bottom: 15px; color: var(--gov-blue-dark); border-bottom: 1px solid #EEE; padding-bottom: 5px;">Issue Transaction Slip</h3>
+                
+                <div id="issue-error" class="hidden text-danger" style="margin-bottom: 10px; font-weight: bold; font-size:13px;"></div>
+                <div id="issue-success" class="hidden text-success" style="margin-bottom: 10px; font-weight: bold; font-size:13px;"></div>
+
+                <form onsubmit="handleIssueBook(event)">
+                    <div class="form-group">
+                        <label for="issue-student-id">Student Registration ID <span class="required-star">*</span></label>
+                        <input type="text" id="issue-student-id" placeholder="Enter Registration ID (e.g. STU101)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="issue-book-isbn">Book ISBN / Accession No <span class="required-star">*</span></label>
+                        <input type="text" id="issue-book-isbn" placeholder="Enter ISBN (e.g. 978-0073523309)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="issue-date">Issue Date <span class="required-star">*</span></label>
+                        <input type="date" id="issue-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="issue-due-date">Due Return Date <span class="required-star">*</span></label>
+                        <input type="date" id="issue-due-date" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Process Issue Transaction</button>
+                        <button type="button" class="btn btn-secondary" onclick="location.href='admin_home.html'">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
