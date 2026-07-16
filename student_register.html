@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - MMMC Central Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Portal Registration: New Student Library ID Generation
+                <span class="fig-no">Fig 7.9 Student new registration page</span>
+            </div>
+
+            <div class="gov-form">
+                <h3 style="margin-bottom: 15px; color: var(--gov-blue-dark); border-bottom: 1px solid #EEE; padding-bottom: 5px;">Student Enrolment Form</h3>
+                
+                <div id="reg-error" class="hidden text-danger" style="margin-bottom: 10px; font-weight: bold; font-size:13px;"></div>
+                <div id="reg-success" class="hidden text-success" style="margin-bottom: 10px; font-weight: bold; font-size:13px;"></div>
+
+                <form onsubmit="handleStudentRegistration(event)">
+                    <div class="form-group">
+                        <label for="reg-name">Full Student Name <span class="required-star">*</span></label>
+                        <input type="text" id="reg-name" placeholder="Enter full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-id">Roll No / Student ID <span class="required-star">*</span></label>
+                        <input type="text" id="reg-id" placeholder="e.g. STU103" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Institutional Email <span class="required-star">*</span></label>
+                        <input type="email" id="reg-email" placeholder="studentname@college.edu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-dept">Academic Department <span class="required-star">*</span></label>
+                        <select id="reg-dept" required>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Electrical Engineering">Electrical Engineering</option>
+                            <option value="Other">Other Arts / Science</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Access Password <span class="required-star">*</span></label>
+                        <input type="password" id="reg-password" placeholder="Create password" required>
+                    </div>
+
+                    <!-- Agreement Checkbox linking to rules -->
+                    <div class="form-group" style="align-items: flex-start; margin-top: 20px;">
+                        <label style="width: auto; text-align: left; padding-right: 0;">
+                            <input type="checkbox" id="reg-agree" style="margin-right: 8px;" required> 
+                            I have read and agree to follow all 
+                            <a href="rules_agreement.html" style="color: var(--gov-blue-medium); font-weight: bold; text-decoration: underline;">
+                                Library Rules and Contract Agreement
+                            </a> 
+                            guidelines. <span class="required-star">*</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Submit Registration</button>
+                        <button type="button" class="btn btn-secondary" onclick="location.href='student_login.html'">Already Registered? Login</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
