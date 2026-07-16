@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MMMC Central Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Contact Information
+            </div>
+
+            <!-- Hero Banner representing the istockphoto cropped image -->
+            <div class="hero-banner">
+                <div class="hero-text-overlay">
+                    <h2>Reach the Library Desk</h2>
+                    <p>Michael Madhusudan Memorial College Central Library, Durgapur. Our administrative desk is available for book verification, returns, fine clearance, and registration queries.</p>
+                </div>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact details card -->
+                <div class="contact-card">
+                    <h3>College Address</h3>
+                    <ul class="contact-info-list">
+                        <li>
+                            <strong>Address:</strong>
+                            <span>Kabiguru Sarani, City Center,<br>Durgapur – 713216, West Bengal</span>
+                        </li>
+                        <li>
+                            <strong>Phone:</strong>
+                            <span>0343 2566700</span>
+                        </li>
+                        <li>
+                            <strong>E-Mail:</strong>
+                            <span>contact.mmmc@gmail.com</span>
+                        </li>
+                        <li>
+                            <strong>Hours:</strong>
+                            <span>Monday - Saturday: 09:00 AM to 05:00 PM</span>
+                        </li>
+                    </ul>
+
+                    <div class="contact-map-placeholder">
+                        [ MMMC Campus Location Map ]
+                    </div>
+                </div>
+
+                <!-- Contact enquiry form -->
+                <div class="contact-card">
+                    <h3>Enquiry Desk</h3>
+                    <form onsubmit="event.preventDefault(); alert('Thank you for contacting MMMC Library. We will get back to you shortly.'); this.reset();">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required style="width: 100%;">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email Address" required style="width: 100%;">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Library ID (If applicable)" style="width: 100%;">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Write your query or message..." rows="4" required style="width: 100%; font-family: Arial, sans-serif;"></textarea>
+                        </div>
+                        <div class="form-actions" style="padding-left: 0;">
+                            <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
