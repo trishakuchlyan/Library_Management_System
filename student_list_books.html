@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Books - MMMC Central Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar-placeholder"></aside>
+
+        <section class="display-pane" id="main-content">
+            <div class="page-title">
+                Library Catalog: Browse & Search
+                <span class="fig-no">Fig 7.13 List of books in Library</span>
+            </div>
+
+            <!-- Search box -->
+            <form class="search-bar" onsubmit="handleStudentSearch(event)">
+                <input type="text" id="student-book-search" placeholder="Search by Book Title, Author or ISBN...">
+                <select id="student-book-filter-dept">
+                    <option value="">-- All Departments --</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Search Catalogue</button>
+            </form>
+
+            <div class="table-container">
+                <table class="gov-table">
+                    <thead>
+                        <tr>
+                            <th>ISBN / Accession</th>
+                            <th>Book Title</th>
+                            <th>Author</th>
+                            <th>Subject Department</th>
+                            <th style="text-align: center;">Stock Status</th>
+                            <th style="text-align: center;">Requisition Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-books-table-body">
+                        <!-- Populated dynamically by app.js -->
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="btn btn-secondary" onclick="location.href='student_dashboard.html'">Back to Dashboard</button>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="app.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>
